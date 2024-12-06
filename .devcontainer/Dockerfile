@@ -1,12 +1,13 @@
+# Base image for Solidity development
 FROM node:16
 
-# Install dependencies for Ethereum development
-RUN npm install -g truffle ganache-cli
+# Install Solidity compiler
+RUN npm install -g solc
 
-# Install Remix CLI if needed
-RUN npm install -g @remix-project/remixd
+# Install Remix IDE
+RUN npm install -g remixd
 
-# Set the working directory
+# Set up work directory
 WORKDIR /workspace
 
-CMD ["bash"]
+CMD ["sleep", "infinity"]
