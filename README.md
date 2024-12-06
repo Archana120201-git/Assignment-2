@@ -1,4 +1,4 @@
-# **Ethereum Bank Smart Contract**
+# Assignment 2 : Ethereum Bank Smart Contract
 
 ## Overview
 This smart contract implements an Ethereum Bank with features like deposits, withdrawals, interest calculation, and owner-specific functions. It uses advanced Solidity concepts like ownership, modifiers, and state management to ensure security and proper functionality.
