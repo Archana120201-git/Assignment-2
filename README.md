@@ -28,7 +28,7 @@ This smart contract implements an Ethereum Bank with features like deposits, wit
 1. Go to **Remix IDE** (https://remix.ethereum.org/)
 2. Create a new file named `code.sol` and paste the contract code.
 3. Compile the contract with Solidity version 0.8.0 or higher.
-4. Deploy the contract on **Remix VM** or connect to a testnet.
+4. Deploy the contract on **Remix VM**.
 5. Interact with the deployed contract using **deposit**, **withdraw**, **setInterestRate**, and **withdrawAll** functions.
 6. Verify functionality by checking balances, interest calculations, and ensuring that only the owner can execute owner-specific functions.
 
