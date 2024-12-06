@@ -1,0 +1,11 @@
+{
+  "name": "ethereum-bank-assignment",
+  "version": "1.0.0",
+  "description": "Assignment repository for Ethereum Bank smart contract",
+  "scripts": {
+    "start": "remixd -s . --remix-ide https://remix.ethereum.org"
+  },
+  "dependencies": {
+    "solc": "^0.8.0"
+  }
+}
