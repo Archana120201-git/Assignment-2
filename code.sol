@@ -8,44 +8,50 @@ contract AdvancedBank {
 
     // Constructor to initialize the owner
     constructor() {
-        owner = msg.sender; // Set the contract deployer as the owner
+        // TODO: Set the contract deployer as the owner
     }
 
     // Modifier to restrict access to owner-only functions
     modifier onlyOwner() {
-        require(msg.sender == owner, "Caller is not the owner");
+        // TODO: Add a require statement to ensure msg.sender is the owner
         _;
     }
 
     // Function to deposit Ether into the bank
     function deposit() public payable {
-        require(msg.value > 0, "Deposit amount must be greater than zero");
-        balances[msg.sender] += msg.value; // Update the balance for the sender
+        /* TODO:
+        1) Check that the deposit amount is greater than zero
+        2) update the balance for the receiver
+        */
+
     }
 
     // Function to withdraw Ether from the bank
     function withdraw(uint256 amount) public {
-        require(balances[msg.sender] >= amount, "Insufficient balance");
-        balances[msg.sender] -= amount; // Deduct the amount from the sender's balance
-        payable(msg.sender).transfer(amount); // Transfer Ether to the sender
+        /* TODO:
+        1) Check if the sender's balance is sufficient for the withdrawl
+        2) Deduct the amount from the sender's balance
+        3) Transfer Ether to the sender
+        */
+
     }
 
     // Function to calculate interest for the caller
     function calculateInterest() public view returns (uint256) {
-        return (balances[msg.sender] * interestRate) / 100; // Interest formula: balance * rate / 100
+        // TODO: Implement interest calculation: (balance * interestRate / 100)
+        return 0; // Replace this with the actual calculation
     }
 
     // Function for the owner to set the interest rate
     function setInterestRate(uint256 rate) public onlyOwner {
         require(rate > 0 && rate <= 100, "Interest rate must be between 1 and 100%");
-        interestRate = rate; // Update the interestRate variable
+        // TODO: Update the interestRate variable
     }
 
     // Function for the owner to withdraw all funds (administrative purpose)
     function withdrawAll() public onlyOwner {
         uint256 contractBalance = address(this).balance; // Get the contract's total balance
-        require(contractBalance > 0, "No funds available in the contract");
-        payable(owner).transfer(contractBalance); // Transfer all Ether to the owner
+        // TODO: Transfer all Ether to the owner
     }
 
     // Function to check the balance of the caller
@@ -55,6 +61,6 @@ contract AdvancedBank {
 
     // Fallback function to handle direct Ether transfers
     receive() external payable {
-        deposit(); // Call the deposit function when Ether is sent directly
+        deposit(); // TODO: Call the deposit function when Ether is sent directly
     }
 }
