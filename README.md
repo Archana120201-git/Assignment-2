@@ -14,7 +14,7 @@ This smart contract implements an Ethereum Bank with features like deposits, wit
 
 ## Instructions
 
-1. Implement the contract code by completing the TODOs in `code.sol`.
+1. Implement the contract code by completing the **TODO's** in `code.sol`.
 2. Compile and deploy the contract using **Remix IDE**.
 3. **Test Functions:**
    * Use the **deposit** function to deposit Ether.
